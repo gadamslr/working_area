@@ -16,9 +16,9 @@ compSciKeyWords = { 'Operator' : 'Something that tells python what to do with nu
 var = 1
 while var == 1 :
 
- searchWord = input("Please enter a word to search for in the dictionary:")
- 
- print("{0} definition: {1}".format(searchWord, compSciKeyWords[searchWord]))
+    searchWord = input("Please enter a word to search for in the dictionary:")
 
- 
-
+    try:
+         print("{0} definition: {1}".format(searchWord, compSciKeyWords[searchWord]))
+    except KeyError:
+        print("Word not found, please try again!!")
