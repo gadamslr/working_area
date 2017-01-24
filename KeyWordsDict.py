@@ -17,7 +17,9 @@ var = 1
 while var == 1 :
 
     searchWord = input("Please enter a word to search for in the dictionary:")
-
+    
+    # Adding the try and except 'Error handler' to allow for mistakes in the search word / term used.'
+    
     try:
          print("{0} definition: {1}".format(searchWord, compSciKeyWords[searchWord]))
     except KeyError:
